@@ -8,7 +8,7 @@ if no file is found on the usb drive or if there is no usb drive found the paylo
 
 using the basic install you can access the landing page through the ps4 <b>user guide</b> or the webbrowser by going to http://cache/index.html
 
-if you already have another offline cache installed you can back that up using the DB_SG_Backup payload and place the <b>ApplicationCache.db</b> from that backup on the root of a usb drive and use this payload to reinstall it if you have to delete the browser data or lose it for any reason.
+if you already have another offline cache installed you can back that up using the <a href=https://github.com/stooged/DB_SG_Backup-50X>DB_SG_Backup</a> payload and place the <b>ApplicationCache.db</b> from that backup on the root of a usb drive and use this payload to reinstall it if you have to delete the browser data or lose it for any reason.
 
 
  
