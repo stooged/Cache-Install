@@ -71,8 +71,6 @@ int patcher(struct thread *td){
 	uint64_t cr0 = readCr0();
 	writeCr0(cr0 & ~X86_CR0_WP);
 
-        *(uint32_t *)(kernel_base + 0x14A63F1) = 0x9090000; //505
-
 	// Restore write protection
 	writeCr0(cr0);
 
