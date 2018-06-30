@@ -22,8 +22,8 @@ CREATE TABLE IF NOT EXISTS `Caches` (
 	`size`	INTEGER
 );
 
-INSERT INTO `Caches` VALUES (1,1,373571);
-INSERT INTO `Caches` VALUES (2,2,373571);
+INSERT INTO `Caches` VALUES (1,1,373423);
+INSERT INTO `Caches` VALUES (2,2,373423);
 
 CREATE TABLE IF NOT EXISTS `CacheWhitelistURLs` (
 	`url`	TEXT NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `CacheResources` (
 
 INSERT INTO `CacheResources` VALUES (1,'http://manuals.playstation.net/document/en/ps4/manifest.appcache',200,'http://manuals.playstation.net/document/en/ps4/manifest.appcache','text/plain','','Connection:close
 Content-Type:text/plain
-Content-Length:192
+Content-Length:44
 ',1);
 
 INSERT INTO `CacheResources` VALUES (2,'http://manuals.playstation.net/document/en/ps4/index.html',200,'http://manuals.playstation.net/document/en/ps4/index.html','text/html','','Connection:close
@@ -92,7 +92,7 @@ Content-Length:55598
 
 INSERT INTO `CacheResources` VALUES (11,'http://cache/manifest.appcache',200,'http://cache/manifest.appcache','text/plain','','Connection:close
 Content-Type:text/plain
-Content-Length:192
+Content-Length:44
 ',1);
 
 INSERT INTO `CacheResources` VALUES (12,'http://cache/index.html',200,'http://cache/index.html','text/html','','Connection:close
@@ -150,15 +150,7 @@ CREATE TABLE IF NOT EXISTS `CacheResourceData` (
 INSERT INTO `CacheResourceData` VALUES (1,'CACHE MANIFEST
 
 CACHE:
-index.html
-AppToUsb.html
-DB_SG_Backup.html
-Enable_VR.html
-KernelDumper.html
-ps4-dumper-vtx.html
-ps4-ftp-vtx.html
-ps4-hen-vtx.html
-bg.png.html
+*
 
 NETWORK:
 *

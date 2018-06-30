@@ -15,7 +15,7 @@ int _main(struct thread *td) {
 	initKernel();
 	initLibc();
 	syscall(11,patcher,td);
-    initSysUtil();
+	initSysUtil();
 	if (!dir_exists("/user/system/webkit/webbrowser/appcache"))
 	{
 	    mkdir ("/user/system/webkit/webbrowser/appcache", 0777);
