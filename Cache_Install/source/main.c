@@ -11,6 +11,27 @@ void writeCacheDB()
     close(fid);
 }
 
+void blockHistory()
+{
+	char hfile[256]; 
+	DIR *dir = opendir("/user/home/");
+    if (dir)
+	{
+		struct dirent *dp;
+		while ((dp = readdir(dir)) != NULL)
+		{
+			if (!strcmp(dp->d_name, ".") || !strcmp(dp->d_name, ".."))
+			{}
+		else
+		{
+			sprintf(hfile, "/user/home/%s/webbrowser/endhistory.txt", dp->d_name);
+			unlink(hfile);
+			mkdir(hfile, 0777);
+			}
+		}
+	}
+}
+
 int _main(struct thread *td) {
 	initKernel();
 	initLibc();
@@ -20,6 +41,7 @@ int _main(struct thread *td) {
 	{
 	    mkdir ("/user/system/webkit/webbrowser/appcache", 0777);
 	}
+	blockHistory();
 	int usbdir = open("/mnt/usb0/.dirtest", O_WRONLY | O_CREAT | O_TRUNC, 0777);
          if (usbdir == -1)
             {
