@@ -4,8 +4,8 @@
 
 void writeCacheDB()
 {
-	size_t len;
-	unsigned char* fbuf = base64_decode(ApcStr, sizeof(ApcStr), &len);
+    size_t len;
+    unsigned char* fbuf = base64_decode(ApcStr, sizeof(ApcStr), &len);
     int fid = open("/user/system/webkit/webbrowser/appcache/ApplicationCache.db", O_WRONLY | O_CREAT | O_TRUNC, 0777);
     write(fid, fbuf, len);
     close(fid);
@@ -27,8 +27,8 @@ int _main(struct thread *td) {
                 if (usbdir == -1)
                 {
                     systemMessage("No usb found\nUsing Internal Cache");
-					writeCacheDB();
-				    systemMessage("Cache install Complete.\n\nBookmark:\nhttp://cache/index.html");
+                    writeCacheDB();
+                    systemMessage("Cache install Complete.\n\nBookmark:\nhttp://cache/index.html");
                     return 0;
                 }
                 else
@@ -36,9 +36,9 @@ int _main(struct thread *td) {
                     close(usbdir);    
                     if (file_exists("/mnt/usb1/ApplicationCache.db")) 
                     { 
-					systemMessage("Cache file found on USB1");
+                    systemMessage("Cache file found on USB1");
                     copy_File("/mnt/usb1/ApplicationCache.db","/user/system/webkit/webbrowser/appcache/ApplicationCache.db");
-					systemMessage("Cache restore Complete.");
+                    systemMessage("Cache restore Complete.");
                     }
 					else
 					{
@@ -53,16 +53,16 @@ int _main(struct thread *td) {
                 close(usbdir);
                 if (file_exists("/mnt/usb0/ApplicationCache.db")) 
                 {
-					systemMessage("Cache file found on USB0");
+                    systemMessage("Cache file found on USB0");
                     copy_File("/mnt/usb0/ApplicationCache.db","/user/system/webkit/webbrowser/appcache/ApplicationCache.db");
-					systemMessage("Cache restore Complete.");
+                    systemMessage("Cache restore Complete.");
                 }
-				else
-				{
-					systemMessage("No cache file found on USB0\nUsing Internal Cache");
-					writeCacheDB();
-					systemMessage("Cache install Complete.\n\nBookmark:\nhttp://cache/index.html");
-				}
+                else
+                {
+                    systemMessage("No cache file found on USB0\nUsing Internal Cache");
+                    writeCacheDB();
+                    systemMessage("Cache install Complete.\n\nBookmark:\nhttp://cache/index.html");
+                }
             }
 	return 0;
 }
