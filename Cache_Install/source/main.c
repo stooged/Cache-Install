@@ -4,11 +4,19 @@
 
 void writeCacheDB()
 {
-    size_t len;
+    size_t len = 0;
     unsigned char* fbuf = base64_decode(ApcStr, sizeof(ApcStr), &len);
+	if (len != 0)
+	{
     int fid = open("/user/system/webkit/webbrowser/appcache/ApplicationCache.db", O_WRONLY | O_CREAT | O_TRUNC, 0777);
     write(fid, fbuf, len);
     close(fid);
+	systemMessage("Cache install Complete\n\nBookmark:\nhttp://cache/index.html");
+	}
+	else
+	{
+		systemMessage("ERROR:\nNo internal cache found");
+	}
 }
 
 int _main(struct thread *td) {
@@ -28,7 +36,6 @@ int _main(struct thread *td) {
                 {
                     systemMessage("No usb found\nUsing Internal Cache");
                     writeCacheDB();
-                    systemMessage("Cache install Complete.\n\nBookmark:\nhttp://cache/index.html");
                     return 0;
                 }
                 else
@@ -44,7 +51,6 @@ int _main(struct thread *td) {
 					{
 						systemMessage("No cache file found on USB1\nUsing Internal Cache");
 						writeCacheDB();
-						systemMessage("Cache install Complete.\n\nBookmark:\nhttp://cache/index.html");
 					}
                 }
             }
@@ -61,7 +67,6 @@ int _main(struct thread *td) {
                 {
                     systemMessage("No cache file found on USB0\nUsing Internal Cache");
                     writeCacheDB();
-                    systemMessage("Cache install Complete.\n\nBookmark:\nhttp://cache/index.html");
                 }
             }
 	return 0;
