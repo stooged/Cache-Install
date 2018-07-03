@@ -12,6 +12,7 @@ void writeCacheDB()
     write(fid, fbuf, len);
     close(fid);
 	systemMessage("Cache install Complete\n\nBookmark:\nhttp://cache/index.html");
+	openBrowser("http://cache/index.html");
 	}
 	else
 	{
