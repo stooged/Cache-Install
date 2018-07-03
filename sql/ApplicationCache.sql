@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `Caches` (
 
 INSERT INTO `Caches` VALUES (1,1,1678286);
 INSERT INTO `Caches` VALUES (2,2,1678286);
+INSERT INTO `Caches` VALUES (3,3,1678286);
 
 CREATE TABLE IF NOT EXISTS `CacheWhitelistURLs` (
 	`url`	TEXT NOT NULL,
@@ -180,6 +181,75 @@ Content-Type:text/html
 Content-Length:33985
 ',14);
 
+INSERT INTO `CacheResources` VALUES (29,'http://manuals.playstation.net/document/gb/ps4/manifest.appcache',200,'http://manuals.playstation.net/document/gb/ps4/manifest.appcache','text/plain','','Connection:close
+Content-Type:text/plain
+Content-Length:44
+',1);
+
+INSERT INTO `CacheResources` VALUES (30,'http://manuals.playstation.net/document/gb/ps4/index.html',200,'http://manuals.playstation.net/document/gb/ps4/index.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:538
+',2);
+
+INSERT INTO `CacheResources` VALUES (31,'http://manuals.playstation.net/document/gb/ps4/AppToUsb.html',200,'http://manuals.playstation.net/document/gb/ps4/AppToUsb.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:53852
+',3);
+
+INSERT INTO `CacheResources` VALUES (32,'http://manuals.playstation.net/document/gb/ps4/DB_SG_Backup.html',200,'http://manuals.playstation.net/document/gb/ps4/DB_SG_Backup.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:42364
+',4);
+
+INSERT INTO `CacheResources` VALUES (33,'http://manuals.playstation.net/document/gb/ps4/Enable_VR.html',200,'http://manuals.playstation.net/document/gb/ps4/Enable_VR.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:29845
+',5);
+
+INSERT INTO `CacheResources` VALUES (34,'http://manuals.playstation.net/document/gb/ps4/KernelDumper.html',200,'http://manuals.playstation.net/document/gb/ps4/KernelDumper.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:36653
+',6);
+
+INSERT INTO `CacheResources` VALUES (35,'http://manuals.playstation.net/document/gb/ps4/ps4-dumper-vtx.html',200,'http://manuals.playstation.net/document/gb/ps4/ps4-dumper-vtx.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:54824
+',7);
+
+INSERT INTO `CacheResources` VALUES (36,'http://manuals.playstation.net/document/gb/ps4/ps4-ftp-vtx.html',200,'http://manuals.playstation.net/document/gb/ps4/ps4-ftp-vtx.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:62875
+',8);
+
+INSERT INTO `CacheResources` VALUES (37,'http://manuals.playstation.net/document/gb/ps4/ps4-hen-vtx.html',200,'http://manuals.playstation.net/document/gb/ps4/ps4-hen-vtx.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:36454
+',9);
+
+INSERT INTO `CacheResources` VALUES (38,'http://manuals.playstation.net/document/gb/ps4/bg.png',200,'http://manuals.playstation.net/document/gb/ps4/bg.png','image/png','','Connection:close
+Content-Type:image/png
+Content-Length:55598
+',10);
+
+INSERT INTO `CacheResources` VALUES (39,'http://manuals.playstation.net/document/gb/ps4/payloads.html',200,'http://manuals.playstation.net/document/gb/ps4/payloads.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:1405
+',11);
+
+INSERT INTO `CacheResources` VALUES (40,'http://manuals.playstation.net/document/gb/ps4/Mira_Hen.html',200,'http://manuals.playstation.net/document/gb/ps4/Mira_Hen.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:688240
+',12);
+
+INSERT INTO `CacheResources` VALUES (41,'http://manuals.playstation.net/document/gb/ps4/MiraFW_Orbis.html',200,'http://manuals.playstation.net/document/gb/ps4/MiraFW_Orbis.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:581609
+',13);
+
+INSERT INTO `CacheResources` VALUES (42,'http://manuals.playstation.net/document/gb/ps4/History_Blocker.html',200,'http://manuals.playstation.net/document/gb/ps4/History_Blocker.html','text/html','','Connection:close
+Content-Type:text/html
+Content-Length:33985
+',14);
 
 
 CREATE TABLE IF NOT EXISTS `CacheResourceData` (
@@ -221,6 +291,7 @@ CREATE TABLE IF NOT EXISTS `CacheGroups` (
 
 INSERT INTO `CacheGroups` VALUES (1,7015084,'http://manuals.playstation.net/document/en/ps4/manifest.appcache',1,'http_manuals.playstation.net_0');
 INSERT INTO `CacheGroups` VALUES (2,3099380,'http://cache/manifest.appcache',2,'http_cache_0');
+INSERT INTO `CacheGroups` VALUES (3,7015084,'http://manuals.playstation.net/document/gb/ps4/manifest.appcache',3,'http_manuals.playstation.net_0');
 
 CREATE TABLE IF NOT EXISTS `CacheEntries` (
 	`cache`	INTEGER NOT NULL,
@@ -256,6 +327,21 @@ INSERT INTO `CacheEntries` VALUES (2,4,25);
 INSERT INTO `CacheEntries` VALUES (2,4,26);
 INSERT INTO `CacheEntries` VALUES (2,4,27);
 INSERT INTO `CacheEntries` VALUES (2,4,28);
+INSERT INTO `CacheEntries` VALUES (3,2,29);
+INSERT INTO `CacheEntries` VALUES (3,4,30);
+INSERT INTO `CacheEntries` VALUES (3,4,31);
+INSERT INTO `CacheEntries` VALUES (3,4,32);
+INSERT INTO `CacheEntries` VALUES (3,4,33);
+INSERT INTO `CacheEntries` VALUES (3,4,34);
+INSERT INTO `CacheEntries` VALUES (3,4,35);
+INSERT INTO `CacheEntries` VALUES (3,4,36);
+INSERT INTO `CacheEntries` VALUES (3,4,37);
+INSERT INTO `CacheEntries` VALUES (3,4,38);
+INSERT INTO `CacheEntries` VALUES (3,4,39);
+INSERT INTO `CacheEntries` VALUES (3,4,40);
+INSERT INTO `CacheEntries` VALUES (3,4,41);
+INSERT INTO `CacheEntries` VALUES (3,4,42);
+
 
 CREATE TABLE IF NOT EXISTS `CacheAllowsAllNetworkRequests` (
 	`wildcard`	INTEGER NOT NULL,
@@ -263,6 +349,7 @@ CREATE TABLE IF NOT EXISTS `CacheAllowsAllNetworkRequests` (
 );
 INSERT INTO `CacheAllowsAllNetworkRequests` VALUES (1,1);
 INSERT INTO `CacheAllowsAllNetworkRequests` VALUES (1,2);
+INSERT INTO `CacheAllowsAllNetworkRequests` VALUES (1,3);
 CREATE TRIGGER CacheResourceDeleted AFTER DELETE ON CacheResources FOR EACH ROW BEGIN  DELETE FROM CacheResourceData WHERE id = OLD.data; END;
 CREATE TRIGGER CacheResourceDataDeleted AFTER DELETE ON CacheResourceData FOR EACH ROW WHEN OLD.path NOT NULL BEGIN  INSERT INTO DeletedCacheResources (path) values (OLD.path); END;
 CREATE TRIGGER CacheEntryDeleted AFTER DELETE ON CacheEntries FOR EACH ROW BEGIN  DELETE FROM CacheResources WHERE id = OLD.resource; END;
