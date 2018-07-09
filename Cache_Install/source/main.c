@@ -11,7 +11,10 @@ void writeCacheDB()
     int fid = open("/user/system/webkit/webbrowser/appcache/ApplicationCache.db", O_WRONLY | O_CREAT | O_TRUNC, 0777);
     write(fid, fbuf, len);
     close(fid);
+	free(fbuf);
+	sceKernelSleep(3);
 	systemMessage("Cache install Complete\n\nBookmark:\nhttp://cache/index.html");
+	sceKernelSleep(1);
 	openBrowser("http://cache/index.html");
 	}
 	else
