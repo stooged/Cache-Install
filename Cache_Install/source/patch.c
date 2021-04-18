@@ -41,11 +41,9 @@ int patcher(struct thread *td){
 
 	void* kernel_base = &((uint8_t*)__readmsr(0xC0000082))[-0x1C0];
 	uint8_t* kernel_ptr = (uint8_t*)kernel_base;
-    //7.02 Offsets
-	void** got_prison0 =   (void**)&kernel_ptr[0x004523C4];
-    void** got_rootvnode = (void**)&kernel_ptr[0x00029A30];
-
-	cred->cr_uid = 0;
+    void** got_prison0 =   (void**)&kernel_ptr[0x0113E398];
+	void** got_rootvnode = (void**)&kernel_ptr[0x022C5750];
+    cred->cr_uid = 0;
 	cred->cr_ruid = 0;
 	cred->cr_rgid = 0;
 	cred->cr_groups[0] = 0;
